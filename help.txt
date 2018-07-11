@@ -36,3 +36,5 @@ source deactivate
 # Running
 
 ./env-ProjectD/bin/start
+./env-ProjectD/bin/set-PackageA-version 0.0.5
+./env-ProjectD/bin/set-PackageB-version 0.0.3
