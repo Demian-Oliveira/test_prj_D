@@ -71,7 +71,10 @@ setup(
     # # if there are any scripts
     # ~/anaconda3/envs/design2.0-v0.2/bin
     # ~/anaconda3/bin
-    scripts=['bin/start', 'scripts/start.py'],
+    scripts=['bin/start', 'scripts/start.py',
+             'bin/set-PackageA-version',
+             'bin/set-PackageB-version'
+             ],
 )
 
 # # Limpando tudo
