@@ -21,6 +21,7 @@ source activate env-ProjectD
 cd ~/PycharmProjects/envs
 source activate env-ProjectD
 pip install git+https://github.com/dmyanster/test_prj_D --process-dependency-links
+source deactivate
 
 ################################################################
 # Updating
@@ -28,6 +29,7 @@ pip install git+https://github.com/dmyanster/test_prj_D --process-dependency-lin
 cd ~/PycharmProjects/envs
 source activate env-ProjectD
 pip install git+https://github.com/dmyanster/test_prj_D --process-dependency-links --upgrade
+source deactivate
 
 
 ################################################################
