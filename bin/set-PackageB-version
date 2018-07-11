@@ -1,0 +1,11 @@
+#!/bin/sh
+if [ $# -lt 1 ]; then
+  echo 1>&2 "$0: missing package version argument"
+  exit 2
+elif [ $# -gt 1 ]; then
+  echo 1>&2 "$0: too many arguments"
+  exit 2
+fi
+
+source activate ~/PycharmProjects/envs/env-ProjectD
+pip install -e git://github.com/dmyanster/test_pkg_B.git@v$1#egg=PackageB.egg-info
