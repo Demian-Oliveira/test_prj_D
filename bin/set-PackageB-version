@@ -7,5 +7,5 @@ elif [ $# -gt 1 ]; then
   exit 2
 fi
 
-source activate ~/PycharmProjects/envs/env-ProjectD
+source activate env-ProjectD
 pip install -e git://github.com/dmyanster/test_pkg_B.git@v$1#egg=PackageB.egg-info
