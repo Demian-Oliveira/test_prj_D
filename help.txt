@@ -1,22 +1,29 @@
+# [Removing and reinstalling ProjectD]
+
 ################################################################
-# Limpando tudo
+# Creating base folders
+
+mkdir ~/PycharmProjects
+mkdir ~/PycharmProjects/envs
+
+################################################################
+# Removing ProjectD enviroment
 
 cd ~/PycharmProjects/envs
 source deactivate
 rm -rf env-ProjectD
 
 ################################################################
-# Creating enviroment
+# Creating ProjectD enviroment
 
 cd ~/PycharmProjects/envs
 python -m venv --without-pip env-ProjectD
 source activate env-ProjectD
 curl https://bootstrap.pypa.io/get-pip.py | python
 source deactivate
-source activate env-ProjectD
 
 ################################################################
-# Installing
+# Installing ProjectD
 
 cd ~/PycharmProjects/envs
 source activate env-ProjectD
@@ -24,17 +31,25 @@ pip install git+https://github.com/dmyanster/test_prj_D --process-dependency-lin
 source deactivate
 
 ################################################################
-# Updating
+# Running before update
+
+./env-ProjectD/bin/start
+
+################################################################
+# Updating version
+
+./env-ProjectD/bin/set-PackageA-version 0.0.5
+./env-ProjectD/bin/set-PackageB-version 0.0.2
+
+################################################################
+# Running after update
+
+./env-ProjectD/bin/start
+
+################################################################
+# Updating ProjectD
 
 cd ~/PycharmProjects/envs
 source activate env-ProjectD
 pip install git+https://github.com/dmyanster/test_prj_D --process-dependency-links --upgrade
 source deactivate
-
-
-################################################################
-# Running
-
-./env-ProjectD/bin/start
-./env-ProjectD/bin/set-PackageA-version 0.0.5
-./env-ProjectD/bin/set-PackageB-version 0.0.3
