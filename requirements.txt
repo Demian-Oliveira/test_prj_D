@@ -1,5 +1,5 @@
 setuptools
 distributed==1.19.1
-git+https://github.com/dmyanster/test_pkg_A.git@v0.0.4#egg=PackageA.egg-info
-git+https://github.com/dmyanster/test_pkg_B.git@v0.0.3#egg=PackageB.egg-info
+git+https://github.com/dmyanster/test_pkg_A.git@v0.0.4#egg=PackageA
+git+https://github.com/dmyanster/test_pkg_B.git@v0.0.3#egg=PackageB
 numpy==1.13.1
