@@ -5,7 +5,7 @@ Header 1
 **Header 2**
 
 - install dependencies
-    - pip install -r requirements.txt
+    - pip install -r requirements_pip.txt
 
 - create a virtual environment
     - python3 -m venv ~/PycharmProjects/envs/ProjectD

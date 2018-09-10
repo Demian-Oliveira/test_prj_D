@@ -2,11 +2,11 @@ from setuptools import setup, find_packages
 
 
 def install_deps():
-    """Reads requirements.txt and preprocess it
+    """Reads requirements_pip.txt and preprocess it
     to be feed into setuptools.
 
     This is the only possible way (we found)
-    how requirements.txt can be reused in setup.py
+    how requirements_pip.txt can be reused in setup.py
     using dependencies from private github repositories.
 
     Links must be appendend by `-{StringWithAtLeastOneNumber}`
@@ -21,7 +21,7 @@ def install_deps():
     Returns:
          list of packages and dependency links.
     """
-    default = open('requirements.txt', 'r').readlines()
+    default = open('requirements_pip.txt', 'r').readlines()
     new_pkgs = []
     links = []
     for resource in default:
@@ -72,6 +72,7 @@ setup(
     # ~/anaconda3/envs/design2.0-v0.2/bin
     # ~/anaconda3/bin
     scripts=['bin/start', 'scripts/start.py',
+             'bin/update',
              'bin/set-PackageA-version',
              'bin/set-PackageB-version'
              ],
